@@ -29,9 +29,40 @@
 		0FF6B1DA2F67620000102BC8 /* ConcurrencyArchitectureAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcurrencyArchitectureAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0FF6B25B2F67659200102BC8 /* Exceptions for "ConcurrencyArchitectureApp" folder in "ConcurrencyArchitectureAppTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/DomainModels.swift,
+				Services/DashboardRepository.swift,
+				Services/ObservabilityAPI.swift,
+				Services/PreviewCache.swift,
+				Services/QueryChannel.swift,
+				Services/SearchRepository.swift,
+			);
+			target = 0FF6B1CF2F6761FF00102BC8 /* ConcurrencyArchitectureAppTests */;
+		};
+		0FF6B25C2F67659200102BC8 /* Exceptions for "ConcurrencyArchitectureApp" folder in "ConcurrencyArchitectureAppUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/DomainModels.swift,
+				Services/DashboardRepository.swift,
+				Services/ObservabilityAPI.swift,
+				Services/PreviewCache.swift,
+				Services/QueryChannel.swift,
+				Services/SearchRepository.swift,
+			);
+			target = 0FF6B1D92F67620000102BC8 /* ConcurrencyArchitectureAppUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0FF6B1C52F6761FD00102BC8 /* ConcurrencyArchitectureApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0FF6B25B2F67659200102BC8 /* Exceptions for "ConcurrencyArchitectureApp" folder in "ConcurrencyArchitectureAppTests" target */,
+				0FF6B25C2F67659200102BC8 /* Exceptions for "ConcurrencyArchitectureApp" folder in "ConcurrencyArchitectureAppUITests" target */,
+			);
 			path = ConcurrencyArchitectureApp;
 			sourceTree = "<group>";
 		};
