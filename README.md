@@ -1,6 +1,15 @@
 # Concurrency Architecture App
 
-This sample iOS app is designed to clearly demonstrate advanced Swift concurrency architecture in a compact, interview-friendly project.
+<p align="center">
+  <img alt="Swift" src="https://img.shields.io/badge/Swift-6-orange.svg" />
+  <img alt="Platform" src="https://img.shields.io/badge/Platform-iOS%2018%2B-blue.svg" />
+  <img alt="UI" src="https://img.shields.io/badge/UI-SwiftUI-black.svg" />
+  <img alt="Focus" src="https://img.shields.io/badge/Focus-Swift%20Concurrency-green.svg" />
+</p>
+
+An open-source SwiftUI sample app that makes **advanced Swift concurrency** easy to see, explain, and reuse.
+
+If you are learning Swift concurrency, preparing for iOS interviews, teaching structured concurrency, or looking for a clean demo of `actor`, `AsyncStream`, task groups, caching, and cancellation in one place, this repo is for you.
 
 ## Demo
 
@@ -24,7 +33,7 @@ Once those files are present, this section will render nicely on GitHub:
   <img src="docs/media/quick-demo.gif" alt="Quick demo of the app" width="80%" />
 </p>
 
-Full video walkthrough: [Watch the MP4 demo](docs/media/demo.mp4)
+Full video walkthrough: [Watch the video demo](docs/media/demo.mov)
 
 ### What the demo shows
 
@@ -32,6 +41,20 @@ Full video walkthrough: [Watch the MP4 demo](docs/media/demo.mp4)
 - Structured concurrency with `async let` for parallel dashboard loading
 - Debounced and cancellable live search powered by `AsyncStream`
 - Task-group based parallel preview enrichment with actor-backed caching
+
+## Why people find this useful
+
+- It shows multiple real Swift concurrency patterns in one small app instead of isolated snippets.
+- The architecture is simple enough to study quickly but realistic enough to adapt into production code.
+- The UI makes concurrency states visible, which helps in demos, blog posts, interviews, and learning sessions.
+- The repository is intentionally documentation-friendly, so it is easy to walk through with a team.
+
+## Who this repo is for
+
+- iOS engineers learning modern Swift concurrency
+- Developers preparing for senior iOS or platform interviews
+- Content creators making SwiftUI or concurrency tutorials
+- Teams that want a lightweight reference implementation for actor-based architecture
 
 ## Architecture at a glance
 
@@ -55,6 +78,17 @@ That split keeps the concurrency story easy to explain:
 - A cancellable `AsyncStream` query pipeline for debounced live search.
 - `Sendable` models flowing cleanly across concurrent boundaries.
 - `@MainActor` observable view models that keep UI updates serialized.
+
+## Why this architecture is interesting
+
+Many sample apps stop at `async/await`. This one goes further:
+
+- shared mutable state is isolated behind actors
+- duplicated work is prevented with in-flight task coalescing
+- user input is bridged into async workflows through `AsyncStream`
+- search enrichment runs in parallel while still keeping UI updates deterministic
+
+That combination makes the project useful both as a teaching artifact and as a starter reference.
 
 ## App tour
 
@@ -89,6 +123,23 @@ If you are demoing this project live, a good walkthrough order is:
 3. Move to `SearchViewModel` to show debouncing and cancellation.
 4. Finish in `SearchRepository` to explain task groups and actor-backed caching.
 
+## Quick start
+
+1. Clone the repository
+2. Open `ConcurrencyArchitectureApp.xcodeproj` in Xcode
+3. Run the `ConcurrencyArchitectureApp` scheme on an iPhone simulator
+4. Pull to refresh the dashboard
+5. Type quickly in Search Lab to see cancellation and debounced async search
+
+## Recommended GitHub setup
+
+For better discoverability, check [docs/GITHUB_SETUP.md](docs/GITHUB_SETUP.md) after pushing:
+
+- a stronger repository description
+- recommended GitHub topics
+- social preview image guidance
+- lightweight promotion ideas for sharing the project
+
 ## Key files
 
 - `ConcurrencyArchitectureApp/Services/DashboardRepository.swift`
@@ -103,6 +154,10 @@ If you are demoing this project live, a good walkthrough order is:
 2. Run the `ConcurrencyArchitectureApp` scheme on an iPhone simulator.
 3. Pull to refresh the dashboard and type quickly in Search Lab to see cancellation and debouncing in action.
 4. Open the source side-by-side with the running app to connect each interaction to the concurrency mechanism behind it.
+
+## Contributing
+
+Contributions are welcome. If you want to improve the UI, add more concurrency demos, strengthen tests, or improve the teaching material, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Tests
 

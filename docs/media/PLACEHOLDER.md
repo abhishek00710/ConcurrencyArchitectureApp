@@ -10,7 +10,8 @@ Add the following files with these exact names:
 - `search-lab.png`
 - `search-loading.png`
 - `quick-demo.gif`
-- `demo.mp4`
+- `demo.mov`
+- `social-preview.png`
 
 ## Screenshot plan
 
@@ -67,7 +68,7 @@ Tips:
 
 ## MP4 plan
 
-### `demo.mp4`
+### `demo.mov`
 
 Keep this around 30 to 60 seconds.
 
