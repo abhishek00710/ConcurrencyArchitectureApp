@@ -2,6 +2,37 @@
 
 This sample iOS app is designed to clearly demonstrate advanced Swift concurrency architecture in a compact, interview-friendly project.
 
+## Demo
+
+Add your screenshots and recordings under `docs/media/` with the following filenames:
+
+- `dashboard.png`
+- `search-lab.png`
+- `search-loading.png`
+- `quick-demo.gif`
+- `demo.mp4`
+
+Once those files are present, this section will render nicely on GitHub:
+
+<p align="center">
+  <img src="docs/media/dashboard.png" alt="Dashboard screen" width="30%" />
+  <img src="docs/media/search-lab.png" alt="Search Lab screen" width="30%" />
+  <img src="docs/media/search-loading.png" alt="Search in-flight state" width="30%" />
+</p>
+
+<p align="center">
+  <img src="docs/media/quick-demo.gif" alt="Quick demo of the app" width="80%" />
+</p>
+
+Full video walkthrough: [Watch the MP4 demo](docs/media/demo.mp4)
+
+### What the demo shows
+
+- Actor-isolated repositories managing shared mutable state safely
+- Structured concurrency with `async let` for parallel dashboard loading
+- Debounced and cancellable live search powered by `AsyncStream`
+- Task-group based parallel preview enrichment with actor-backed caching
+
 ## Architecture at a glance
 
 The app is intentionally split into three layers:
